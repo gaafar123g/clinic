@@ -243,10 +243,24 @@ h1,h2,h3,h4,h5,h6{ font-family: var(--font-display); font-weight:700; color: var
 /* ==========================================================================
    HERO SLIDER
    ========================================================================== */
-.hero-section{ position:relative; margin-top: 0; }
+/* الهيرو الآن يقع أسفل الشريط العلوي + الـ Navbar الثابتين (بدل الوقوع خلفهما) —
+   هذا يمنع أي تغطية على الصور، ويهم خاصة مع الشرائح الجاهزة (بانرات) */
+.hero-section{ position:relative; margin-top: 116px; background:#fff; }
+
+/* الارتفاع مبني على نسبة عرض الشاشة (مثل 16:9 تقريبًا) بدل ارتفاع الشاشة الكامل —
+   هذا يمنع اقتصاص الصور على الجوال أيًا كانت أبعادها، ويعرض الصورة كاملة دائمًا */
+.hero-section .carousel-item{ background:#fff; }
 .hero-section .carousel-item img{
-  height: 100vh; min-height: 620px; object-fit: cover; width:100%;
+  width:100%; display:block; object-fit: cover;
+  height: 56.25vw; min-height: 320px; max-height: 640px;
 }
+
+/* شرائح "بانر جاهز" (تصميم متكامل بنص وشعار وأيقونات مدمجة بالصورة نفسها) —
+   تُعرض كاملة دون أي اقتصاص، ودون تغميق أو نص إضافي فوقها لتفادي ازدواجية المحتوى */
+.carousel-item.banner-slide img{ object-fit: contain; }
+.carousel-item.banner-slide .hero-overlay,
+.carousel-item.banner-slide .hero-caption{ display:none; }
+
 .hero-overlay{
   position:absolute; inset:0;
   background: linear-gradient(90deg, rgba(6,36,38,.82) 0%, rgba(6,36,38,.55) 45%, rgba(6,36,38,.35) 100%);
@@ -255,7 +269,7 @@ html[dir="ltr"] .hero-overlay{
   background: linear-gradient(270deg, rgba(6,36,38,.82) 0%, rgba(6,36,38,.55) 45%, rgba(6,36,38,.35) 100%);
 }
 .hero-caption{
-  position:absolute; inset:0; display:flex; align-items:center; z-index:2; padding-top: 108px;
+  position:absolute; inset:0; display:flex; align-items:center; z-index:2; padding-top: 0;
 }
 .hero-caption .container{ max-width: 720px; margin-inline-start: 0; margin-inline-end: auto; }
 html[dir="ltr"] .hero-caption .container{ margin-inline-start:0; }
@@ -267,13 +281,13 @@ html[dir="ltr"] .hero-caption .container{ margin-inline-start:0; }
   border: 1px solid rgba(255,255,255,.2);
 }
 .hero-caption h1{
-  color:#fff; font-size: clamp(2rem, 1.3rem + 3vw, 3.4rem); line-height:1.25; margin-bottom:1.2rem;
+  color:#fff; font-size: clamp(1.5rem, 1rem + 2.6vw, 3.4rem); line-height:1.25; margin-bottom:1.2rem;
   text-shadow: 0 4px 24px rgba(0,0,0,.25);
 }
 .hero-caption p{
-  color: rgba(255,255,255,.88); font-size: 1.15rem; max-width: 560px; margin-bottom:2rem; line-height:1.8;
+  color: rgba(255,255,255,.88); font-size: clamp(.9rem, .8rem + .5vw, 1.15rem); max-width: 560px; margin-bottom:1.5rem; line-height:1.8;
 }
-.hero-btns{ display:flex; flex-wrap:wrap; gap: 1rem; }
+.hero-btns{ display:flex; flex-wrap:wrap; gap: .7rem; }
 
 .hero-wave{ position:absolute; bottom:-2px; left:0; width:100%; height:70px; z-index:3; }
 
@@ -397,6 +411,54 @@ html[dir="ltr"] .service-card:hover .service-link i{ transform: rotate(180deg) t
 .doctor-info{ padding: 1.3rem 1.1rem; text-align:center; }
 .doctor-info h3{ font-size:1.08rem; margin-bottom:.3rem; }
 .doctor-spec{ color: var(--teal-primary); font-size:.85rem; font-weight:700; }
+
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+.gallery-section{ background: var(--teal-pale-2); }
+.gallery-item{
+  position:relative; display:block; width:100%; aspect-ratio: 1/1; border:none; padding:0;
+  border-radius: var(--radius-md); overflow:hidden; cursor:pointer; box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+.gallery-item img{
+  width:100%; height:100%; object-fit:cover; display:block; transition: transform .5s ease;
+}
+.gallery-item:hover img{ transform: scale(1.08); }
+.gallery-item::after{
+  content:''; position:absolute; inset:0; background: linear-gradient(0deg, rgba(13,43,46,.68) 0%, rgba(13,43,46,0) 45%);
+  opacity:0; transition: opacity .3s ease;
+}
+.gallery-item:hover::after{ opacity:1; }
+.gallery-zoom{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(.7);
+  width:44px; height:44px; border-radius:50%; background: rgba(255,255,255,.92); color: var(--teal-deep);
+  display:flex; align-items:center; justify-content:center; font-size:1rem;
+  opacity:0; transition: all .3s ease; z-index:2;
+}
+.gallery-item:hover .gallery-zoom{ opacity:1; transform:translate(-50%,-50%) scale(1); }
+.gallery-cap{
+  position:absolute; bottom:0; inset-inline:0; padding: .9rem .8rem .7rem; z-index:2;
+  color:#fff; font-family: var(--font-display); font-weight:700; font-size:.85rem;
+  transform: translateY(8px); opacity:0; transition: all .3s ease;
+}
+.gallery-item:hover .gallery-cap{ transform:translateY(0); opacity:1; }
+
+/* Lightbox modal */
+.gallery-modal-content{ background:transparent; border:none; box-shadow:none; }
+.gallery-modal-content img{
+  width:100%; max-height:78vh; object-fit:contain; border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+.gallery-modal-caption{
+  text-align:center; color:#fff; font-family: var(--font-display); font-weight:700;
+  margin-top:1rem; margin-bottom:0; font-size:1rem;
+}
+.gallery-modal-close{
+  position:absolute; top:-44px; inset-inline-end:0; background:#fff; border-radius:50%;
+  opacity:1; width:36px; height:36px; padding:0; z-index:3;
+}
+#galleryModal .modal-dialog{ max-width: 900px; }
 
 /* ==========================================================================
    BOOKING
@@ -580,7 +642,6 @@ html[dir="ltr"] .testi-arrow .fa-chevron-left:before{ content:"\f054"; }
   .booking-side{ padding-inline-end:0; padding-bottom:2rem; }
 }
 @media (max-width: 767.98px){
-  .hero-section .carousel-item img{ height: 88vh; min-height:520px; }
   .hero-caption .container{ max-width:100%; }
   .about-media-mark{ display:none; }
 }

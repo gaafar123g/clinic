@@ -167,6 +167,7 @@
         <li class="nav-item"><a class="nav-link" href="#services"><span class="ar">خدماتنا</span><span class="en">Services</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#why-us"><span class="ar">لماذا نحن</span><span class="en">Why Us</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#doctors"><span class="ar">فريقنا</span><span class="en">Our Team</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery"><span class="ar">معرض الصور</span><span class="en">Gallery</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#testimonials"><span class="ar">آراء العملاء</span><span class="en">Testimonials</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#contact"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a></li>
       </ul>
@@ -199,8 +200,8 @@
     </div>
 
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/hero-1.jpg" class="d-block w-100" alt="واجهة عيادات لايف ويز في الرياض" loading="eager">
+      <div class="carousel-item active banner-slide">
+        <img src="img/s.1.png" class="d-block w-100" alt="بجمالك نهتم - عيادات لايف ويز للتجميل" loading="eager">
         <div class="hero-overlay"></div>
         <div class="hero-caption">
           <div class="container">
@@ -228,8 +229,8 @@
         </div>
       </div>
 
-      <div class="carousel-item">
-        <img src="images/hero-2.jpg" class="d-block w-100" alt="استقبال عيادات لايف ويز" loading="lazy">
+      <div class="carousel-item banner-slide">
+        <img src="img/s.2.jfif" class="d-block w-100" alt="استقبال عيادات لايف ويز" loading="lazy">
         <div class="hero-overlay"></div>
         <div class="hero-caption">
           <div class="container">
@@ -703,6 +704,95 @@
 </section>
 
 <!-- ============================================================
+     معرض الصور — GALLERY
+     ============================================================ -->
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow reveal-up">
+        <span class="ar">معرض الصور</span><span class="en">Gallery</span>
+      </span>
+      <h2 class="section-title reveal-up delay-1">
+        <span class="ar">لمحة من أجواء عيادتنا</span>
+        <span class="en">A Glimpse Inside Our Clinic</span>
+      </h2>
+      <p class="section-text mx-auto reveal-up delay-2" style="max-width:640px">
+        <span class="ar">بيئة عصرية صممت بعناية لتعكس الرقي والاهتمام بأدق التفاصيل، من أول خطوة داخل العيادة.</span>
+        <span class="en">A modern environment carefully designed to reflect elegance and attention to detail, from the moment you step in.</span>
+      </p>
+    </div>
+
+    <div class="row g-3 g-md-4">
+      <div class="col-6 col-lg-4 reveal-left">
+        <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-img="images/gallery-1.jpg"
+                data-cap-ar="واجهة العيادة" data-cap-en="Clinic Exterior">
+          <img src="images/gallery-1.jpg" alt="واجهة عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          <span class="gallery-cap"><span class="ar">واجهة العيادة</span><span class="en">Clinic Exterior</span></span>
+        </button>
+      </div>
+      <div class="col-6 col-lg-4 reveal-up delay-1">
+        <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-img="images/gallery-2.jpg"
+                data-cap-ar="الاستقبال" data-cap-en="Reception">
+          <img src="images/gallery-2.jpg" alt="استقبال عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          <span class="gallery-cap"><span class="ar">الاستقبال</span><span class="en">Reception</span></span>
+        </button>
+      </div>
+      <div class="col-6 col-lg-4 reveal-right">
+        <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-img="images/gallery-3.jpg"
+                data-cap-ar="غرفة العلاج" data-cap-en="Treatment Room">
+          <img src="images/gallery-3.jpg" alt="غرفة علاج مجهزة في عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          <span class="gallery-cap"><span class="ar">غرفة العلاج</span><span class="en">Treatment Room</span></span>
+        </button>
+      </div>
+      <div class="col-6 col-lg-4 reveal-left delay-1">
+        <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-img="images/gallery-4.jpg"
+                data-cap-ar="صالة الانتظار" data-cap-en="Waiting Area">
+          <img src="images/gallery-4.jpg" alt="صالة الانتظار في عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          <span class="gallery-cap"><span class="ar">صالة الانتظار</span><span class="en">Waiting Area</span></span>
+        </button>
+      </div>
+      <div class="col-6 col-lg-4 reveal-up delay-2">
+        <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-img="images/gallery-5.jpg"
+                data-cap-ar="استقبال العيادة" data-cap-en="Reception Counter">
+          <img src="images/gallery-5.jpg" alt="استقبال عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          <span class="gallery-cap"><span class="ar">استقبال العيادة</span><span class="en">Reception Counter</span></span>
+        </button>
+      </div>
+      <div class="col-6 col-lg-4 reveal-right delay-1">
+        <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                data-img="images/gallery-6.jpg"
+                data-cap-ar="الدرج الداخلي" data-cap-en="Interior Staircase">
+          <img src="images/gallery-6.jpg" alt="الدرج الداخلي في عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          <span class="gallery-cap"><span class="ar">الدرج الداخلي</span><span class="en">Interior Staircase</span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal (مشترك لكل صور المعرض) -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content gallery-modal-content">
+      <button type="button" class="btn-close gallery-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img src="" alt="" id="galleryModalImg">
+      <p class="gallery-modal-caption" id="galleryModalCap"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
      نموذج حجز موعد — BOOKING
      ============================================================ -->
 <section id="booking" class="section booking-section">
@@ -1040,6 +1130,7 @@
           <li><a href="#about"><span class="ar">نبذة عنا</span><span class="en">About</span></a></li>
           <li><a href="#services"><span class="ar">خدماتنا</span><span class="en">Services</span></a></li>
           <li><a href="#doctors"><span class="ar">فريقنا</span><span class="en">Our Team</span></a></li>
+          <li><a href="#gallery"><span class="ar">معرض الصور</span><span class="en">Gallery</span></a></li>
           <li><a href="#booking"><span class="ar">احجز موعد</span><span class="en">Book Now</span></a></li>
         </ul>
       </div>

@@ -310,4 +310,29 @@
       setTimeout(hidePreloader, 6000);
     }
   }
+
+  /* ============================================================
+     10) معرض الصور — تعبئة نافذة العرض المكبّر (Lightbox) عند فتحها
+     ============================================================ */
+  const galleryModal = document.getElementById("galleryModal");
+  if (galleryModal) {
+    galleryModal.addEventListener("show.bs.modal", function (event) {
+      const trigger = event.relatedTarget;
+      if (!trigger) return;
+      const imgSrc = trigger.getAttribute("data-img");
+      const capAr = trigger.getAttribute("data-cap-ar") || "";
+      const capEn = trigger.getAttribute("data-cap-en") || "";
+      const isAr = document.body.classList.contains("lang-ar");
+
+      const modalImg = document.getElementById("galleryModalImg");
+      const modalCap = document.getElementById("galleryModalCap");
+      if (modalImg) {
+        modalImg.setAttribute("src", imgSrc);
+        modalImg.setAttribute("alt", isAr ? capAr : capEn);
+      }
+      if (modalCap) {
+        modalCap.textContent = isAr ? capAr : capEn;
+      }
+    });
+  }
 })();
