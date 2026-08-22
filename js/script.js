@@ -200,8 +200,8 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // إغلاق قائمة الجوال المنسدلة عند الضغط على أي رابط
-  document.querySelectorAll(".navbar-nav .nav-link, .nav-actions a").forEach(function (link) {
+  // إغلاق قائمة الجوال المنسدلة عند الضغط على أي رابط أو زر داخل القائمة (بما فيها زر تبديل اللغة)
+  document.querySelectorAll(".navbar-nav .nav-link, .nav-actions a, .nav-actions button").forEach(function (link) {
     link.addEventListener("click", function () {
       const collapseEl = document.getElementById("navbarMain");
       if (collapseEl && collapseEl.classList.contains("show") && window.bootstrap) {
@@ -286,7 +286,7 @@
      ============================================================ */
   const preloader = document.getElementById("preloader");
   if (preloader) {
-    const MIN_DISPLAY_MS = 2000;
+    const MIN_DISPLAY_MS = 1000;
     const startTime = Date.now();
     document.body.style.overflow = "hidden";
 
@@ -307,7 +307,7 @@
     } else {
       window.addEventListener("load", hidePreloader);
       // شبكة اتصال بطيئة: لا تُبقي الزائر منتظرًا أكثر من اللازم
-      setTimeout(hidePreloader, 6000);
+      setTimeout(hidePreloader, 2000);
     }
   }
 

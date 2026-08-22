@@ -243,20 +243,14 @@ h1,h2,h3,h4,h5,h6{ font-family: var(--font-display); font-weight:700; color: var
 /* ==========================================================================
    HERO SLIDER
    ========================================================================== */
-/* الهيرو الآن يقع أسفل الشريط العلوي + الـ Navbar الثابتين (بدل الوقوع خلفهما) —
-   هذا يمنع أي تغطية على الصور، ويهم خاصة مع الشرائح الجاهزة (بانرات) */
+/* الهيرو يقع أسفل الشريط العلوي + الـ Navbar الثابتين (بدل الوقوع خلفهما) */
 .hero-section{ position:relative; margin-top: 116px; background:#fff; }
-
-/* الارتفاع مبني على نسبة عرض الشاشة (مثل 16:9 تقريبًا) بدل ارتفاع الشاشة الكامل —
-   هذا يمنع اقتصاص الصور على الجوال أيًا كانت أبعادها، ويعرض الصورة كاملة دائمًا */
 .hero-section .carousel-item{ background:#fff; }
 .hero-section .carousel-item img{
-  width:100%; display:block; object-fit: cover;
+  width:100%; display:block; object-fit:cover;
   height: 56.25vw; min-height: 320px; max-height: 640px;
 }
-
-/* شرائح "بانر جاهز" (تصميم متكامل بنص وشعار وأيقونات مدمجة بالصورة نفسها) —
-   تُعرض كاملة دون أي اقتصاص، ودون تغميق أو نص إضافي فوقها لتفادي ازدواجية المحتوى */
+/* شرائح "بانر جاهز" (نص وشعار مدمجين بالصورة نفسها) — تُعرض كاملة بدون اقتصاص وبدون نص إضافي فوقها */
 .carousel-item.banner-slide img{ object-fit: contain; }
 .carousel-item.banner-slide .hero-overlay,
 .carousel-item.banner-slide .hero-caption{ display:none; }
@@ -277,7 +271,8 @@ html[dir="ltr"] .hero-caption .container{ margin-inline-start:0; }
 .hero-eyebrow{
   display:inline-block; color: #B9F1EE; font-family: var(--font-display); font-weight:700;
   letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; margin-bottom:1rem;
-  background: rgba(255,255,255,.1); padding:.4rem 1rem; border-radius:50px;
+  background: rgba(255,255,255,.1);
+   padding:.4rem 1rem; border-radius:50px;
   border: 1px solid rgba(255,255,255,.2);
 }
 .hero-caption h1{
@@ -303,7 +298,7 @@ html[dir="ltr"] .hero-arrow .fa-chevron-right:before{ content:"\f053"; }
 html[dir="ltr"] .hero-arrow .fa-chevron-left:before{ content:"\f054"; }
 
 .carousel-indicators [data-bs-target]{
-  width:10px; height:10px; border-radius:50%; background: rgba(255,255,255,.5); border:none; opacity:1;
+  width:10px; height:10px; border-radius:50%; background: rgba(83, 80, 80, 0.5); border:none; opacity:1;
 }
 .carousel-indicators .active{ background: var(--teal-light); width:28px; border-radius:50px; }
 
@@ -642,6 +637,7 @@ html[dir="ltr"] .testi-arrow .fa-chevron-left:before{ content:"\f054"; }
   .booking-side{ padding-inline-end:0; padding-bottom:2rem; }
 }
 @media (max-width: 767.98px){
+  .hero-section .carousel-item img{ min-height:520px; }
   .hero-caption .container{ max-width:100%; }
   .about-media-mark{ display:none; }
 }
