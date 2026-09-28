@@ -83,6 +83,7 @@
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "شارع أبو بكر الصديق، حي المرسلات",
     "addressLocality": "الرياض",
     "addressRegion": "الرياض",
     "addressCountry": "SA"
@@ -96,8 +97,14 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
-      "opens": "09:00",
+      "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday"],
+      "opens": "14:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday"],
+      "opens": "14:00",
       "closes": "21:00"
     }
   ],
@@ -146,7 +153,7 @@
      ============================================================ -->
 <div id="preloader" class="preloader" role="status" aria-label="جاري التحميل / Loading">
   <div class="preloader-inner">
-    <span class="preloader-icon"><i class="fa-solid fa-heart-pulse"></i></span>
+    <span class="preloader-icon"><i class="fa-solid fa-syringe"></i></span>
     <span class="preloader-text">
       <span class="ar">عيادات لايف ويز</span><span class="en">Life Way's Medical</span>
     </span>
@@ -158,16 +165,24 @@
 <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي / Skip to content</a>
 
 <!-- ============================================================
-     TOP BAR — روابط السوشيال ميديا (فوق الـ Navbar)
+     TOP BAR — شريط العروض الفورية والحصرية (نص متحرك مستمر)
      ============================================================ -->
-<div class="top-bar" id="topBar">
-  <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-    <span class="top-bar-tagline d-none d-md-inline-flex">
-      <i class="fa-regular fa-clock"></i>
-      <span class="ar">السبت - الخميس: 9:00ص - 9:00م</span><span class="en">Sat - Thu: 9:00 AM - 9:00 PM</span>
-    </span>
+<div class="top-bar top-bar-promo" id="topBar">
+  <div class="container d-flex align-items-center">
+    <div class="top-bar-marquee">
+      <div class="marquee-track">
+        <a href="#offers" class="top-bar-tagline marquee-item">
+          <i class="fa-solid fa-tags"></i>
+          <span class="ar">عرض حصري للعملاء الجدد: خصم 10% على جميع الخدمات</span><span class="en">Exclusive offer for new clients: 10% off all services</span>
+        </a>
+        <a href="#offers" class="top-bar-tagline marquee-item" aria-hidden="true" tabindex="-1">
+          <i class="fa-solid fa-tags"></i>
+          <span class="ar">عرض حصري للعملاء الجدد: خصم 10% على جميع الخدمات</span><span class="en">Exclusive offer for new clients: 10% off all services</span>
+        </a>
+      </div>
+    </div>
     <!-- روابط السوشيال ميديا الفعلية: Lifeways.sa -->
-    <div class="top-bar-social">
+    <div class="top-bar-social d-none d-md-flex">
       <a href="https://www.tiktok.com/@lifeways.sa" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
       <a href="https://www.snapchat.com/add/lifeways.sa" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
       <a href="https://www.instagram.com/lifeways.sa" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -195,13 +210,13 @@
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav mx-auto align-items-lg-center gap-lg-1">
         <li class="nav-item"><a class="nav-link" href="#hero"><span class="ar">الرئيسية</span><span class="en">Home</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#about"><span class="ar">نبذة عنا</span><span class="en">About</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#services"><span class="ar">خدماتنا</span><span class="en">Services</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#why-us"><span class="ar">لماذا نحن</span><span class="en">Why Us</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#doctors"><span class="ar">فريقنا</span><span class="en">Our Team</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery"><span class="ar">معرض الصور</span><span class="en">Gallery</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonials"><span class="ar">آراء العملاء</span><span class="en">Testimonials</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#about"><span class="ar">نبذة تعريفية</span><span class="en">About</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#departments"><span class="ar">الأقسام</span><span class="en">Departments</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery"><span class="ar">حالات العيادة</span><span class="en">Clinic Cases</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials"><span class="ar">تقييم العملاء</span><span class="en">Reviews</span></a></li>
         <li class="nav-item"><a class="nav-link" href="#contact"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#offers"><span class="ar">عروض</span><span class="en">Offers</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#platforms"><span class="ar">منصاتنا</span><span class="en">Our Platforms</span></a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions">
@@ -233,7 +248,7 @@
 
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/s_2.jpg" class="d-block w-100" alt="بجمالك نهتم - عيادات لايف ويز للتجميل" loading="eager" width="1376" height="1000">
+        <img src="images/hero-1.jpg" class="d-block w-100" alt="واجهة عيادات لايف ويز - عيادة تجميل في الرياض" loading="eager" width="1600" height="900">
         <div class="hero-overlay"></div>
         <div class="hero-caption">
           <div class="container">
@@ -253,8 +268,8 @@
                 <i class="fa-regular fa-calendar-check"></i>
                 <span class="ar">احجزي موعدك الآن</span><span class="en">Book Your Appointment</span>
               </a>
-              <a href="#services" class="btn btn-outline-light-teal btn-lg">
-                <span class="ar">تصفح خدماتنا</span><span class="en">Explore Services</span>
+              <a href="#departments" class="btn btn-outline-light-teal btn-lg">
+                <span class="ar">تصفح أقسامنا</span><span class="en">Explore Departments</span>
               </a>
             </div>
           </div>
@@ -262,7 +277,7 @@
       </div>
 
       <div class="carousel-item">
-        <img src="img/s_3.jpg" class="d-block w-100" alt="استقبال عيادات لايف ويز" loading="lazy" width="1376" height="1000">
+        <img src="images/hero-2.jpg" class="d-block w-100" alt="استقبال عيادات لايف ويز" loading="lazy" width="1600" height="900">
         <div class="hero-overlay"></div>
         <div class="hero-caption">
           <div class="container">
@@ -282,8 +297,8 @@
                 <i class="fa-regular fa-calendar-check"></i>
                 <span class="ar">احجزي موعدك الآن</span><span class="en">Book Your Appointment</span>
               </a>
-              <a href="#doctors" class="btn btn-outline-light-teal btn-lg">
-                <span class="ar">تعرف على فريقنا</span><span class="en">Meet Our Team</span>
+              <a href="#departments" class="btn btn-outline-light-teal btn-lg">
+                <span class="ar">تعرف على أقسامنا</span><span class="en">Meet Our Departments</span>
               </a>
             </div>
           </div>
@@ -291,7 +306,7 @@
       </div>
 
       <div class="carousel-item">
-        <img src="img/s_4.jpg" class="d-block w-100" alt="غرفة علاج مجهزة في عيادات لايف ويز" loading="lazy" width="1376" height="1000">
+        <img src="images/hero-3.jpg" class="d-block w-100" alt="غرفة علاج مجهزة في عيادات لايف ويز" loading="lazy" width="1600" height="900">
         <div class="hero-overlay"></div>
         <div class="hero-caption">
           <div class="container">
@@ -345,7 +360,7 @@
     <div class="row align-items-center gy-5">
       <div class="col-lg-6 order-lg-2">
         <div class="about-media reveal-right">
-          <img src="img/LwayLogo.jpg" alt="لمحة من داخل عيادات لايف ويز" loading="lazy" width="900" height="1000">
+          <img src="images/about.jpg" alt="صالة انتظار عيادات لايف ويز - بيئة عصرية مريحة" loading="lazy" width="900" height="1000">
           <div class="about-media-mark">
             <img src="images/logo.png" alt="" aria-hidden="true" loading="lazy">
           </div>
@@ -356,22 +371,43 @@
           <span class="ar">من نحن</span><span class="en">About Us</span>
         </span>
         <h2 class="section-title reveal-left delay-1">
-          <span class="ar">عيادة تجميل بفِكر مختلف وطموحٍ في مجال التجميل</span>
-          <span class="en">A Unique and Ambitious Cosmetic Clinic</span>
+          <span class="ar">لايف ويز.. حيث تلتقي الخبرة بالجمال</span>
+          <span class="en">Life Way's — Where Expertise Meets Beauty</span>
         </h2>
         <p class="section-text reveal-left delay-2">
           <span class="ar">
-            عيادة تجميل بفِكر مختلف وطموحٍ في مجال التجميل، متفردة بتقديم خدمات متنوعة وبجودة عالية وخبرة
-            فريق متخصص، لخلق تجربة فريدة من نوعها لعملائنا الكرام. تقدّم عيادات لايف ويز في قلب الرياض
-            حلولًا تجميلية متكاملة من حقن الفيلر والبوتوكس إلى إزالة الشعر بالليزر وتنظيف البشرة،
-            ليكون خيارك الأول عندما تبحثين عن أفضل عيادة تجميل في الرياض.
+            عيادات لايف ويز هي عيادة تجميل متخصصة، انطلقت بفكر مختلف وطموح يهدف إلى تقديم تجربة متكاملة
+            في عالم الجمال والعناية.
+            <br><br>
+            نؤمن أن الجمال لا يرتبط بإجراء واحد، بل يبدأ من فهم احتياجات كل شخص وتقديم العناية المناسبة له؛
+            لذلك حرصنا على أن نجمع بين الخبرات الطبية المتخصصة، والتقنيات الحديثة، وأحدث أجهزة الجلدية
+            والتجميل والليزر، لنقدّم خدمات بمعايير عالية وفي بيئة تجمع بين الاحتراف والراحة.
+            <br><br>
+            تضم لايف ويز مجموعة متكاملة من الأقسام المتخصصة في الجلدية والتجميل، البشرة، والليزر، بإشراف
+            فريق متخصص يضع الجودة والدقة ورضا العميل في مقدمة اهتماماته.
+            <br><br>
+            في لايف ويز، لا نقدّم لك مجرد خدمة تجميلية، بل نصنع لك تجربة متكاملة تبدأ بالاهتمام وتُبنى على
+            الثقة، وتنتهي بنتائج تعكس جمالك بأسلوبك الخاص.
+            <br><br>
+            <strong>لايف ويز.. طريقك في الحياة نحو جمال أكثر ثقة.</strong>
           </span>
           <span class="en">
-            A unique and ambitious cosmetic clinic, distinguished by a diverse range of high-quality services
-            and the expertise of a specialized team, aiming to create a one-of-a-kind experience for our valued clients.
-            Located in the heart of Riyadh, Life Way's Medical offers complete aesthetic solutions — from filler
-            and Botox injections to laser hair removal and facial cleansing — making us a leading cosmetic clinic
-            choice in Riyadh.
+            Life Way's Medical is a specialized cosmetic clinic, launched with a different mindset and an
+            ambition to deliver a complete experience in the world of beauty and care.
+            <br><br>
+            We believe beauty isn't tied to a single procedure — it starts with understanding each person's
+            needs and offering the right care for them. That's why we bring together specialized medical
+            expertise, modern technology, and the latest dermatology, cosmetic, and laser equipment, to
+            deliver high-standard services in an environment that combines professionalism with comfort.
+            <br><br>
+            Life Way's brings together a complete set of specialized departments in dermatology &amp; cosmetics,
+            skincare, and laser, overseen by a specialized team that puts quality, precision, and client
+            satisfaction at the heart of everything it does.
+            <br><br>
+            At Life Way's, we don't just offer a cosmetic service — we craft a complete experience that begins
+            with genuine care, is built on trust, and ends with results that reflect your own unique beauty.
+            <br><br>
+            <strong>Life Way's.. Your path in life toward more confident beauty.</strong>
           </span>
         </p>
 
@@ -423,324 +459,138 @@
 </section>
 
 <!-- ============================================================
-     خدماتنا — SERVICES (تجميل)
+     الأقسام — DEPARTMENTS
      ============================================================ -->
-<section id="services" class="section services-section">
+<section id="departments" class="section services-section">
   <div class="section-bg-mark" aria-hidden="true"></div>
   <div class="container position-relative">
     <div class="text-center mb-5">
       <span class="section-eyebrow reveal-up">
-        <span class="ar">خدماتنا</span><span class="en">Our Services</span>
+        <span class="ar">أقسامنا</span><span class="en">Our Departments</span>
       </span>
       <h2 class="section-title reveal-up delay-1">
-        <span class="ar">خدمات تجميلية متكاملة بخبرة متخصصة</span>
-        <span class="en">Comprehensive Aesthetic Services by Specialized Hands</span>
+        <span class="ar">أقسام تجميلية متكاملة بخبرة متخصصة</span>
+        <span class="en">Comprehensive Aesthetic Departments by Specialized Hands</span>
       </h2>
       <p class="section-text mx-auto reveal-up delay-2" style="max-width:640px">
-        <span class="ar">نتميز بتوفير أحدث تقنيات التجميل وخيارات متنوعة تناسب احتياج كل عميلة، بأيدي فريق متخصص وخبرة عالية.</span>
-        <span class="en">We offer the latest aesthetic technologies and a variety of options tailored to every client's needs, by a highly experienced specialized team.</span>
+        <span class="ar">اختاري القسم المناسب لاحتياجك، ثم حددي الإجراء الذي يناسبك بمساعدة فريقنا المتخصص.</span>
+        <span class="en">Choose the department that fits your need, then select the procedure that suits you with the help of our specialized team.</span>
       </p>
     </div>
 
-    <div class="row g-4">
-      <!-- 1: حقن الفيلر -->
-      <div class="col-md-6 col-lg-4 reveal-left">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-syringe"></i></div>
-          <h3><span class="ar">حقن الفيلر</span><span class="en">Filler Injections</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">الشفايف والخدود</span><span class="en">Lips &amp; Cheeks</span></li>
-            <li><span class="ar">الذقن والأصداغ</span><span class="en">Chin &amp; Temples</span></li>
-            <li><span class="ar">تحديد الفك واليدين</span><span class="en">Jawline &amp; Hands</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 2: البوتكس -->
-      <div class="col-md-6 col-lg-4 reveal-up delay-1">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h3><span class="ar">البوتكس</span><span class="en">Botox</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">الجبهة ورفع الحواجب</span><span class="en">Forehead &amp; Brow Lift</span></li>
-            <li><span class="ar">الابتسامة اللثوية وحول العين</span><span class="en">Gummy Smile &amp; Around the Eyes</span></li>
-            <li><span class="ar">شد الرقبة وفرط التعرق</span><span class="en">Neck Lift &amp; Excessive Sweating</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 3: البلازما -->
-      <div class="col-md-6 col-lg-4 reveal-right">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
-          <h3><span class="ar">البلازما</span><span class="en">Plasma (PRP)</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">للنضارة</span><span class="en">Skin Radiance</span></li>
-            <li><span class="ar">معالجة تساقط الشعر</span><span class="en">Hair Loss Treatment</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 4: تجديد شباب البشرة -->
-      <div class="col-md-6 col-lg-4 reveal-left">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
-          <h3><span class="ar">تجديد شباب البشرة</span><span class="en">Skin Rejuvenation &amp; Lift</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">إبر النضارة والشد</span><span class="en">Radiance &amp; Lifting Injections</span></li>
-            <li><span class="ar">الديرمابن</span><span class="en">Dermapen</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 5: الأكسوزوم -->
-      <div class="col-md-6 col-lg-4 reveal-up delay-1">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-vial"></i></div>
-          <h3><span class="ar">الأكسوزوم</span><span class="en">Exosome</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">علاج حب الشباب</span><span class="en">Acne Treatment</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 6: فراكشنال -->
-      <div class="col-md-6 col-lg-4 reveal-right">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3><span class="ar">فراكشنال</span><span class="en">Fractional</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">علاج الندبات وآثار حب الشباب</span><span class="en">Scars &amp; Acne Marks</span></li>
-            <li><span class="ar">نضارة للوجه</span><span class="en">Facial Radiance</span></li>
-            <li><span class="ar">إزالة الزوائد الجلدية</span><span class="en">Skin Tags Removal</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 7: التقشير البارد -->
-      <div class="col-md-6 col-lg-4 reveal-left">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
-          <h3><span class="ar">التقشير البارد</span><span class="en">Cold Peeling</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">تقليل التصبغات</span><span class="en">Reduces Pigmentation</span></li>
-            <li><span class="ar">توحيد لون البشرة</span><span class="en">Evens Skin Tone</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 8: تنظيف البشرة -->
-      <div class="col-md-6 col-lg-4 reveal-up delay-1">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
-          <h3><span class="ar">تنظيف البشرة</span><span class="en">Facial Cleansing</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">تنظيف عميق هيدرافيشل</span><span class="en">Hydrafacial Deep Cleansing</span></li>
-            <li><span class="ar">تنظيف VIP عميق مع عناية</span><span class="en">VIP Deep Cleansing &amp; Care</span></li>
-            <li><span class="ar">تنظيف علاجي</span><span class="en">Therapeutic Cleansing</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 9: إزالة الشعر بالليزر -->
-      <div class="col-md-6 col-lg-4 reveal-right">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-          <h3><span class="ar">إزالة الشعر بالليزر</span><span class="en">Laser Hair Removal</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">بأحدث جهاز ليزر ديكا اجين</span><span class="en">Latest Deka Ajeen Laser Device</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 10: محفزات النمو والخلايا الجذعية -->
-      <div class="col-md-6 col-lg-4 reveal-left">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-dna"></i></div>
-          <h3><span class="ar">محفزات النمو والخلايا الجذعية</span><span class="en">Growth Factors &amp; Stem Cells</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">علاج جميع حالات تساقط الشعر عن طريق الحقن</span><span class="en">Injectable Treatment for All Hair Loss Cases</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-      <!-- 11: تقطيع الندبات -->
-      <div class="col-md-6 col-lg-4 reveal-up delay-1">
-        <article class="service-card">
-          <div class="service-icon"><i class="fa-solid fa-band-aid"></i></div>
-          <h3><span class="ar">تقطيع الندبات</span><span class="en">Scars Subcision</span></h3>
-          <ul class="service-list">
-            <li><span class="ar">علاج آثار حب الشباب</span><span class="en">Acne Scar Treatment</span></li>
-          </ul>
-          <a href="#booking" class="service-link"><span class="ar">احجز الآن</span><span class="en">Book Now</span> <i class="fa-solid fa-arrow-left"></i></a>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     لماذا نحن — WHY US
-     ============================================================ -->
-<section id="why-us" class="section why-section">
-  <div class="container">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-5">
-        <span class="section-eyebrow reveal-left">
-          <span class="ar">لماذا نحن</span><span class="en">Why Choose Us</span>
-        </span>
-        <h2 class="section-title reveal-left delay-1">
-          <span class="ar">لأن ثقتك تستحق أعلى مستويات العناية</span>
-          <span class="en">Because Your Trust Deserves the Highest Standard of Care</span>
-        </h2>
-        <p class="section-text reveal-left delay-2">
-          <span class="ar">نجمع بين الخبرة الطبية والتقنية الحديثة وروح الضيافة، لنجعل كل زيارة تجربة مطمئنة.</span>
-          <span class="en">We combine medical expertise, modern technology, and genuine hospitality to make every visit reassuring.</span>
-        </p>
-        <a href="#booking" class="btn btn-primary-teal btn-lg reveal-left delay-3">
-          <span class="ar">ابدأ رحلتك الصحية</span><span class="en">Start Your Health Journey</span>
-        </a>
-      </div>
-
-      <div class="col-lg-7">
-        <div class="row g-4">
-          <div class="col-sm-6 reveal-right">
-            <div class="why-card">
-              <i class="fa-solid fa-user-group"></i>
-              <h3><span class="ar">فريق عمل مختص</span><span class="en">Specialized Team</span></h3>
-              <p><span class="ar">على قدر عالٍ من الكفاءة والخبرة العملية الواسعة.</span>
-                 <span class="en">Highly efficient staff with extensive practical experience.</span></p>
-            </div>
-          </div>
-          <div class="col-sm-6 reveal-up delay-1">
-            <div class="why-card">
-              <i class="fa-solid fa-microchip"></i>
-              <h3><span class="ar">أحدث التقنيات</span><span class="en">Latest Technologies</span></h3>
-              <p><span class="ar">نتميز بتوفير أحدث التقنيات والأجهزة في مجال التجميل.</span>
-                 <span class="en">We excel in providing the latest cosmetic technologies and equipment.</span></p>
-            </div>
-          </div>
-          <div class="col-sm-6 reveal-up delay-2">
-            <div class="why-card">
-              <i class="fa-solid fa-list-check"></i>
-              <h3><span class="ar">خيارات متنوعة</span><span class="en">Diverse Options</span></h3>
-              <p><span class="ar">نوفر العديد من خيارات التجميل التي تناسب احتياج كل عميلة.</span>
-                 <span class="en">A wide variety of cosmetic options tailored to each client's needs.</span></p>
-            </div>
-          </div>
-          <div class="col-sm-6 reveal-right delay-3">
-            <div class="why-card">
-              <i class="fa-solid fa-arrows-rotate"></i>
-              <h3><span class="ar">مواكبة كل جديد</span><span class="en">Always Up to Date</span></h3>
-              <p><span class="ar">حرصنا الدائم على مواكبة كل ماهو جديد ومميز وعصري.</span>
-                 <span class="en">A steady commitment to what's new, distinctive, and modern.</span></p>
-            </div>
-          </div>
-          <div class="col-sm-6 reveal-left delay-1">
-            <div class="why-card">
-              <i class="fa-solid fa-award"></i>
-              <h3><span class="ar">جدارة مثبتة</span><span class="en">Proven Expertise</span></h3>
-              <p><span class="ar">إثبات جدارتنا وخبرتنا في مجال التجميل.</span>
-                 <span class="en">Demonstrated excellence and expertise in the field of aesthetics.</span></p>
-            </div>
-          </div>
-          <div class="col-sm-6 reveal-up delay-2">
-            <div class="why-card">
-              <i class="fa-regular fa-clock"></i>
-              <h3><span class="ar">دقة في المواعيد</span><span class="en">Precise Scheduling</span></h3>
-              <p><span class="ar">التزام تام بالمواعيد واهتمام حقيقي بأدق التفاصيل.</span>
-                 <span class="en">Full commitment to appointments and attention to the smallest details.</span></p>
-            </div>
-          </div>
+    <!-- قسم 1: الجلدية والتجميل -->
+    <div class="dept-card reveal-left">
+      <div class="dept-header">
+        <div class="dept-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div>
+          <h3><span class="ar">الجلدية والتجميل</span><span class="en">Dermatology &amp; Cosmetics</span></h3>
+          <p><span class="ar">تضم نخبة من الأطباء المختصين في المجال بخبرة تتجاوز 10 سنوات.</span>
+             <span class="en">A team of specialized physicians with over 10 years of experience.</span></p>
         </div>
       </div>
+      <div class="dept-procedures">
+        <span class="ar" style="display:inline;">
+          <span class="proc-pill">الفيلر</span><span class="proc-pill">البوتكس</span><span class="proc-pill">راديس</span>
+          <span class="proc-pill">سكلبترا</span><span class="proc-pill">محفزات الكولاجين</span><span class="proc-pill">إذابة الفيلر</span>
+          <span class="proc-pill">إبر النضارة</span><span class="proc-pill">سكين بوستر</span><span class="proc-pill">ليب بوستر</span>
+          <span class="proc-pill">إنوفيال</span><span class="proc-pill">تساقط الشعر</span><span class="proc-pill">مورفيوس</span>
+          <span class="proc-pill">فراكشينال</span><span class="proc-pill">تقشير بارد</span>
+          <span class="proc-pill">الندبات والتصبغات وآثار الحبوب</span><span class="proc-pill">الشامات والزوائد الجلدية</span>
+        </span>
+        <span class="en" style="display:inline;">
+          <span class="proc-pill">Filler</span><span class="proc-pill">Botox</span><span class="proc-pill">Radiesse</span>
+          <span class="proc-pill">Sculptra</span><span class="proc-pill">Collagen Stimulators</span><span class="proc-pill">Filler Dissolving</span>
+          <span class="proc-pill">Skin Booster</span><span class="proc-pill">Skinbooster</span><span class="proc-pill">Lip Booster</span>
+          <span class="proc-pill">Innofial</span><span class="proc-pill">Hair Loss Treatment</span><span class="proc-pill">Morpheus8</span>
+          <span class="proc-pill">Fractional</span><span class="proc-pill">Cold Peeling</span>
+          <span class="proc-pill">Scars, Pigmentation &amp; Acne Marks</span><span class="proc-pill">Moles &amp; Skin Tags</span>
+        </span>
+      </div>
+
+      <!-- أطباء القسم -->
+      <div class="dept-doctors">
+        <div class="doc-mini">
+          <div class="doc-mini-name"><span class="ar">د. طارق حواش</span><span class="en">Dr. Tarek Hawash</span></div>
+          <ul class="doc-mini-creds">
+            <li><span class="ar">أخصائي جلدية وتجميل</span><span class="en">Dermatology &amp; Cosmetics Specialist</span></li>
+            <li><span class="ar">ماجستير جلدية وتجميل</span><span class="en">Master's in Dermatology &amp; Cosmetics</span></li>
+            <li><span class="ar">عضو الجمعية السعودية لأمراض وجراحة الجلد</span><span class="en">Member, Saudi Society of Dermatology &amp; Dermatologic Surgery</span></li>
+            <li><span class="ar">عضو الأكاديمية الأمريكية للجلدية</span><span class="en">Member, American Academy of Dermatology</span></li>
+            <li><span class="ar">عضو الجمعية الأوروبية للجلدية</span><span class="en">Member, European Society of Dermatology</span></li>
+            <li><span class="ar">عضو الجمعية المصرية للأمراض الجلدية والتناسلية</span><span class="en">Member, Egyptian Society of Dermatology &amp; Venereology</span></li>
+          </ul>
+        </div>
+        <div class="doc-mini">
+          <div class="doc-mini-name"><span class="ar">د. شيماء حافظ</span><span class="en">Dr. Shaimaa Hafez</span></div>
+          <ul class="doc-mini-creds">
+            <li><span class="ar">نائب أول في الأمراض الجلدية</span><span class="en">Senior Registrar in Dermatology</span></li>
+            <li><span class="ar">حاصلة على البورد المصري</span><span class="en">Holder of the Egyptian Board</span></li>
+            <li><span class="ar">دبلوم علوم الليزر من المعهد القومي لليزر</span><span class="en">Diploma in Laser Science, National Institute of Laser</span></li>
+            <li><span class="ar">مختصة في علاج أمراض الجلدية والتجميل والشد اللاجراحي</span><span class="en">Specialist in dermatology, cosmetics &amp; non-surgical lifting</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dept-actions">
+        <a href="#departments" class="service-link"><span class="ar">معرفة المزيد</span><span class="en">Learn More</span> <i class="fa-solid fa-arrow-left"></i></a>
+        <a href="#booking" class="btn btn-primary-teal"><i class="fa-regular fa-calendar-check"></i><span class="ar">احجزي موعدك الآن</span><span class="en">Book Now</span></a>
+      </div>
     </div>
+
+    <!-- قسم 2: البشرة -->
+    <div class="dept-card reveal-up delay-1">
+      <div class="dept-header">
+        <div class="dept-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <div>
+          <h3><span class="ar">البشرة</span><span class="en">Skincare</span></h3>
+          <p><span class="ar">أفضل أخصائية بشرة في كل ما يخص البشرة والشعر.</span>
+             <span class="en">Our leading skin specialist for everything skin and hair related.</span></p>
+        </div>
+      </div>
+      <div class="dept-procedures">
+        <span class="ar" style="display:inline;">
+          <span class="proc-pill">تنظيف بشرة كلاسيك</span><span class="proc-pill">هيدرافيشيال</span>
+          <span class="proc-pill">مورفيوس</span><span class="proc-pill">ديرمابن</span>
+        </span>
+        <span class="en" style="display:inline;">
+          <span class="proc-pill">Classic Facial Cleansing</span><span class="proc-pill">Hydrafacial</span>
+          <span class="proc-pill">Morpheus8</span><span class="proc-pill">Dermapen</span>
+        </span>
+      </div>
+      <div class="dept-actions">
+        <a href="#departments" class="service-link"><span class="ar">معرفة المزيد</span><span class="en">Learn More</span> <i class="fa-solid fa-arrow-left"></i></a>
+        <a href="#booking" class="btn btn-primary-teal"><i class="fa-regular fa-calendar-check"></i><span class="ar">احجزي موعدك الآن</span><span class="en">Book Now</span></a>
+      </div>
+    </div>
+
+    <!-- قسم 3: الليزر -->
+    <div class="dept-card reveal-right">
+      <div class="dept-header">
+        <div class="dept-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+        <div>
+          <h3><span class="ar">الليزر</span><span class="en">Laser</span></h3>
+          <p><span class="ar">أقوى جهاز ليزر مناسب لجميع أنواع الشعر وجميع ألوان البشرة، والجلسة تعادل جلستين عن باقي الأجهزة.</span>
+             <span class="en">The most powerful laser device, suitable for all hair types and all skin tones — one session equals two on other devices.</span></p>
+        </div>
+      </div>
+      <div class="dept-procedures">
+        <span class="ar" style="display:inline;">
+          <span class="proc-pill">جهاز ديكا اجين</span>
+        </span>
+        <span class="en" style="display:inline;">
+          <span class="proc-pill">Deka Ajeen Device</span>
+        </span>
+      </div>
+      <div class="dept-actions">
+        <a href="#departments" class="service-link"><span class="ar">معرفة المزيد</span><span class="en">Learn More</span> <i class="fa-solid fa-arrow-left"></i></a>
+        <a href="#booking" class="btn btn-primary-teal"><i class="fa-regular fa-calendar-check"></i><span class="ar">احجزي موعدك الآن</span><span class="en">Book Now</span></a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ============================================================
-     فريق العمل — TEAM
-     ============================================================ -->
-<section id="doctors" class="section doctors-section">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="section-eyebrow reveal-up">
-        <span class="ar">فريقنا</span><span class="en">Our Team</span>
-      </span>
-      <h2 class="section-title reveal-up delay-1">
-        <span class="ar">تعرّف على فريقنا المتخصص</span>
-        <span class="en">Meet Our Specialized Team</span>
-      </h2>
-    </div>
 
-    <div class="row g-4">
-      <!-- عضوة الفريق 1 — عدّل الاسم والتخصص والصورة -->
-      <div class="col-sm-6 col-lg-3 reveal-left">
-        <article class="doctor-card">
-          <div class="doctor-photo">
-            <img src="images/doctor-1.jpg" alt="[اسم الأخصائية] - استشارية التجميل في عيادات لايف ويز" loading="lazy" width="500" height="600">
-            <div class="doctor-social">
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
-          <div class="doctor-info">
-            <h3><span class="ar">سارة العتيبي</span><span class="en">Sara Al-Otaibi</span></h3>
-            <span class="doctor-spec"><span class="ar">استشارية التجميل</span><span class="en">Aesthetics Consultant</span></span>
-          </div>
-        </article>
-      </div>
-      <!-- عضوة الفريق 2 -->
-      <div class="col-sm-6 col-lg-3 reveal-up delay-1">
-        <article class="doctor-card">
-          <div class="doctor-photo">
-            <img src="images/doctor-2.jpg" alt="[اسم الأخصائية] - أخصائية الحقن والبوتكس في عيادات لايف ويز" loading="lazy" width="500" height="600">
-            <div class="doctor-social">
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
-          <div class="doctor-info">
-            <h3><span class="ar">خلود المطيري</span><span class="en">Khulood Al-Mutairi</span></h3>
-            <span class="doctor-spec"><span class="ar">أخصائية الحقن والبوتكس</span><span class="en">Injectables &amp; Botox Specialist</span></span>
-          </div>
-        </article>
-      </div>
-      <!-- عضوة الفريق 3 -->
-      <div class="col-sm-6 col-lg-3 reveal-up delay-2">
-        <article class="doctor-card">
-          <div class="doctor-photo">
-            <img src="images/doctor-3.jpg" alt="[اسم الأخصائية] - أخصائية العناية بالبشرة في عيادات لايف ويز" loading="lazy" width="500" height="600">
-            <div class="doctor-social">
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
-          <div class="doctor-info">
-            <h3><span class="ar">نورة القحطاني</span><span class="en">Noura Al-Qahtani</span></h3>
-            <span class="doctor-spec"><span class="ar">أخصائية العناية بالبشرة</span><span class="en">Skincare Specialist</span></span>
-          </div>
-        </article>
-      </div>
-      <!-- عضوة الفريق 4 -->
-      <div class="col-sm-6 col-lg-3 reveal-right">
-        <article class="doctor-card">
-          <div class="doctor-photo">
-            <img src="images/doctor-4.jpg" alt="[اسم الأخصائية] - أخصائية الليزر والتقنيات الحديثة في عيادات لايف ويز" loading="lazy" width="500" height="600">
-            <div class="doctor-social">
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
-          <div class="doctor-info">
-            <h3><span class="ar">عمر الحربي</span><span class="en">Omar Al-Harbi</span></h3>
-            <span class="doctor-spec"><span class="ar">أخصائي الليزر والتقنيات الحديثة</span><span class="en">Laser &amp; Advanced Technology Specialist</span></span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      معرض الصور — GALLERY
@@ -749,7 +599,7 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="section-eyebrow reveal-up">
-        <span class="ar">معرض الصور</span><span class="en">Gallery</span>
+        <span class="ar">حالات العيادة</span><span class="en">Clinic Cases</span>
       </span>
       <h2 class="section-title reveal-up delay-1">
         <span class="ar">لمحة من أجواء عيادتنا</span>
@@ -764,27 +614,27 @@
     <div class="row g-3 g-md-4">
       <div class="col-6 col-lg-4 reveal-left">
         <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
-                data-img="images/gallery-1.jpg"
+                data-img="images/hero-1.jpg"
                 data-cap-ar="واجهة العيادة" data-cap-en="Clinic Exterior">
-          <img src="images/gallery-1.jpg" alt="واجهة عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <img src="images/hero-1.jpg" alt="واجهة عيادات لايف ويز" loading="lazy" width="500" height="500">
           <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           <span class="gallery-cap"><span class="ar">واجهة العيادة</span><span class="en">Clinic Exterior</span></span>
         </button>
       </div>
       <div class="col-6 col-lg-4 reveal-up delay-1">
         <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
-                data-img="images/gallery-2.jpg"
+                data-img="images/hero-2.jpg"
                 data-cap-ar="الاستقبال" data-cap-en="Reception">
-          <img src="images/gallery-2.jpg" alt="استقبال عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <img src="images/hero-2.jpg" alt="استقبال عيادات لايف ويز" loading="lazy" width="500" height="500">
           <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           <span class="gallery-cap"><span class="ar">الاستقبال</span><span class="en">Reception</span></span>
         </button>
       </div>
       <div class="col-6 col-lg-4 reveal-right">
         <button type="button" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
-                data-img="images/gallery-3.jpg"
+                data-img="images/hero-3.jpg"
                 data-cap-ar="غرفة العلاج" data-cap-en="Treatment Room">
-          <img src="images/gallery-3.jpg" alt="غرفة علاج مجهزة في عيادات لايف ويز" loading="lazy" width="500" height="500">
+          <img src="images/hero-3.jpg" alt="غرفة علاج مجهزة في عيادات لايف ويز" loading="lazy" width="500" height="500">
           <span class="gallery-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           <span class="gallery-cap"><span class="ar">غرفة العلاج</span><span class="en">Treatment Room</span></span>
         </button>
@@ -862,7 +712,7 @@
           </li>-->
           <li>
             <i class="fa-solid fa-location-dot"></i>
-            <span><span class="ar">الرياض، المملكة العربية السعودية</span><span class="en">Riyadh, Saudi Arabia</span></span>
+            <span><span class="ar">حي المرسلات، شارع أبو بكر الصديق، الرياض</span><span class="en">Al Murasalat, Abu Bakr Al Siddiq St., Riyadh</span></span>
           </li>
         </ul>
       </div>
@@ -871,53 +721,69 @@
         <form id="bookingForm" class="booking-form reveal-right delay-2" novalidate>
           <div class="row g-3">
             <div class="col-md-6">
-              <label class="form-label" for="bkName"><span class="ar">الاسم الكامل</span><span class="en">Full Name</span></label>
+              <label class="form-label" for="bkName"><span class="ar">الاسم الكامل</span><span class="en">Full Name</span> <span class="req-star">*</span></label>
               <input type="text" class="form-control" id="bkName" required minlength="2">
               <div class="invalid-feedback"><span class="ar">فضلًا أدخل اسمك</span><span class="en">Please enter your name</span></div>
             </div>
             <div class="col-md-6">
-              <label class="form-label" for="bkPhone"><span class="ar">رقم الجوال</span><span class="en">Phone Number</span></label>
+              <label class="form-label" for="bkPhone"><span class="ar">رقم الجوال</span><span class="en">Phone Number</span> <span class="req-star">*</span></label>
               <input type="tel" class="form-control" id="bkPhone" required pattern="^[0-9+\s]{8,15}$" dir="ltr" placeholder="05xxxxxxxx">
               <div class="invalid-feedback"><span class="ar">فضلًا أدخل رقم جوال صحيح</span><span class="en">Please enter a valid phone number</span></div>
             </div>
             <div class="col-md-6">
-              <label class="form-label" for="bkService"><span class="ar">الخدمة المطلوبة</span><span class="en">Requested Service</span></label>
+              <label class="form-label" for="bkService"><span class="ar">الخدمة المطلوبة</span><span class="en">Requested Service</span> <span class="req-star">*</span></label>
               <select class="form-select" id="bkService" required>
                 <option value="" selected disabled data-ar="اختر الخدمة" data-en="Select a service"></option>
-                <option data-ar="حقن الفيلر" data-en="Filler Injections"></option>
-                <option data-ar="البوتكس" data-en="Botox"></option>
-                <option data-ar="البلازما" data-en="Plasma (PRP)"></option>
-                <option data-ar="تجديد شباب البشرة" data-en="Skin Rejuvenation &amp; Lift"></option>
-                <option data-ar="الأكسوزوم" data-en="Exosome"></option>
-                <option data-ar="فراكشنال" data-en="Fractional"></option>
-                <option data-ar="التقشير البارد" data-en="Cold Peeling"></option>
-                <option data-ar="تنظيف البشرة" data-en="Facial Cleansing"></option>
-                <option data-ar="إزالة الشعر بالليزر" data-en="Laser Hair Removal"></option>
-                <option data-ar="محفزات النمو والخلايا الجذعية" data-en="Growth Factors &amp; Stem Cells"></option>
-                <option data-ar="تقطيع الندبات" data-en="Scars Subcision"></option>
+                <optgroup label="الجلدية والتجميل" data-ar-label="الجلدية والتجميل" data-en-label="Dermatology &amp; Cosmetics">
+                  <option data-ar="الفيلر" data-en="Filler"></option>
+                  <option data-ar="البوتكس" data-en="Botox"></option>
+                  <option data-ar="راديس" data-en="Radiesse"></option>
+                  <option data-ar="سكلبترا" data-en="Sculptra"></option>
+                  <option data-ar="محفزات الكولاجين" data-en="Collagen Stimulators"></option>
+                  <option data-ar="إذابة الفيلر" data-en="Filler Dissolving"></option>
+                  <option data-ar="إبر النضارة" data-en="Skin Booster"></option>
+                  <option data-ar="سكين بوستر" data-en="Skinbooster"></option>
+                  <option data-ar="ليب بوستر" data-en="Lip Booster"></option>
+                  <option data-ar="إنوفيال" data-en="Innofial"></option>
+                  <option data-ar="تساقط الشعر" data-en="Hair Loss Treatment"></option>
+                  <option data-ar="مورفيوس" data-en="Morpheus8"></option>
+                  <option data-ar="فراكشينال" data-en="Fractional"></option>
+                  <option data-ar="تقشير بارد" data-en="Cold Peeling"></option>
+                  <option data-ar="الندبات والتصبغات وآثار الحبوب" data-en="Scars, Pigmentation &amp; Acne Marks"></option>
+                  <option data-ar="الشامات والزوائد الجلدية" data-en="Moles &amp; Skin Tags"></option>
+                </optgroup>
+                <optgroup label="البشرة" data-ar-label="البشرة" data-en-label="Skincare">
+                  <option data-ar="تنظيف بشرة كلاسيك" data-en="Classic Facial Cleansing"></option>
+                  <option data-ar="هيدرافيشيال" data-en="Hydrafacial"></option>
+                  <option data-ar="مورفيوس (بشرة)" data-en="Morpheus8 (Skin)"></option>
+                  <option data-ar="ديرمابن" data-en="Dermapen"></option>
+                </optgroup>
+                <optgroup label="الليزر" data-ar-label="الليزر" data-en-label="Laser">
+                  <option data-ar="جهاز ديكا اجين" data-en="Deka Ajeen Device"></option>
+                </optgroup>
                 <option data-ar="أخرى" data-en="Other"></option>
               </select>
               <div class="invalid-feedback"><span class="ar">فضلًا اختر الخدمة</span><span class="en">Please select a service</span></div>
             </div>
             <div class="col-md-6">
-              <label class="form-label" for="bkDate"><span class="ar">التاريخ المفضل</span><span class="en">Preferred Date</span></label>
-              <input type="date" class="form-control" id="bkDate" required>
-              <div class="invalid-feedback"><span class="ar">فضلًا اختر التاريخ</span><span class="en">Please choose a date</span></div>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="bkTime"><span class="ar">الوقت المفضل</span><span class="en">Preferred Time</span></label>
-              <input type="time" class="form-control" id="bkTime" required>
-              <div class="invalid-feedback"><span class="ar">فضلًا اختر الوقت</span><span class="en">Please choose a time</span></div>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="bkGender"><span class="ar">الجنس</span><span class="en">Gender</span></label>
-              <select class="form-select" id="bkGender">
+              <label class="form-label" for="bkGender"><span class="ar">الجنس</span><span class="en">Gender</span> <span class="req-star">*</span></label>
+              <select class="form-select" id="bkGender" required>
+                <option value="" selected disabled data-ar="اختر" data-en="Select"></option>
                 <option data-ar="ذكر" data-en="Male"></option>
                 <option data-ar="أنثى" data-en="Female"></option>
               </select>
+              <div class="invalid-feedback"><span class="ar">فضلًا اختر الجنس</span><span class="en">Please select gender</span></div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="bkDate"><span class="ar">التاريخ المفضل</span><span class="en">Preferred Date</span></label>
+              <input type="date" class="form-control" id="bkDate">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="bkTime"><span class="ar">الوقت المفضل</span><span class="en">Preferred Time</span></label>
+              <input type="time" class="form-control" id="bkTime">
             </div>
             <div class="col-12">
-              <label class="form-label" for="bkNotes"><span class="ar">ملاحظات إضافية (اختياري)</span><span class="en">Additional Notes (optional)</span></label>
+              <label class="form-label" for="bkNotes"><span class="ar">ملاحظات إضافية</span><span class="en">Additional Notes</span></label>
               <textarea class="form-control" id="bkNotes" rows="3"></textarea>
             </div>
             <div class="col-12">
@@ -940,11 +806,11 @@
   <div class="container">
     <div class="text-center mb-5">
       <span class="section-eyebrow reveal-up">
-        <span class="ar">آراء عملائنا</span><span class="en">Testimonials</span>
+        <span class="ar">تقييم العملاء</span><span class="en">Client Reviews</span>
       </span>
       <h2 class="section-title reveal-up delay-1">
-        <span class="ar">ثقتكم وسام نفتخر به</span>
-        <span class="en">Your Trust Is a Badge We're Proud Of</span>
+        <span class="ar">ثقة نعتز بها وتجربة نسعى دائمًا للارتقاء بها</span>
+        <span class="en">Trust We Cherish, an Experience We Always Strive to Improve</span>
       </h2>
     </div>
 
@@ -955,13 +821,13 @@
           <div class="testimonial-card mx-auto">
             <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             <p class="quote">
-              <span class="ar">"تعامل راقٍ من الاستقبال حتى جلسة الفيلر، والأخصائية أخذت وقتها الكافي في الشرح. نتيجة طبيعية وتجربة مطمئنة فعلًا."</span>
-              <span class="en">"A refined experience from reception to the filler session — the specialist took her time to explain everything. Natural results and a truly reassuring visit."</span>
+              <span class="ar">"من أجمل عيادات التجميل بالرياض، نتيجة الفيلر رائعة على يد الدكتورة سارة البسيوني، دكتورة راقية وأسلوبها جميل جدًا، والموظفات متعاونات وبشوشات."</span>
+              <span class="en">"One of the loveliest cosmetic clinics in Riyadh — my filler results with Dr. Sara Al-Bassiouny were wonderful, she's a refined doctor with a lovely manner, and the staff are cooperative and welcoming."</span>
             </p>
             <div class="testimonial-user">
               <img src="images/client-1.jpg" alt="عميلة عيادات لايف ويز" loading="lazy" width="60" height="60">
               <div>
-                <h4><span class="ar">أم عبدالله</span><span class="en">Umm Abdullah</span></h4>
+                <h4><span class="ar">تقييم من جوجل</span><span class="en">Google Review</span></h4>
                 <span><span class="ar">عميلة حقن الفيلر</span><span class="en">Filler Client</span></span>
               </div>
             </div>
@@ -972,14 +838,14 @@
           <div class="testimonial-card mx-auto">
             <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             <p class="quote">
-              <span class="ar">"حجزت موعدي عن طريق واتساب بكل سهولة، والالتزام بالموعد كان ممتازًا بدون انتظار طويل."</span>
-              <span class="en">"Booking through WhatsApp was so easy, and they were right on time with barely any wait."</span>
+              <span class="ar">"العيادة رائعة والاستقبال قمة في الرقي، والأخصائية الجازي قمة في الروعة وتشتغل بأمانة. نصحت ابنتي بالانتظار أسبوعًا بعد إيقاف الأكرتين قبل عمل تنظيف البشرة."</span>
+              <span class="en">"The clinic is wonderful and the reception is the height of elegance. Specialist Al-Jazi is fantastic and works with real honesty — she advised my daughter to wait a week after stopping Accutane before a facial cleaning."</span>
             </p>
             <div class="testimonial-user">
               <img src="images/client-2.jpg" alt="عميلة عيادات لايف ويز" loading="lazy" width="60" height="60">
               <div>
-                <h4><span class="ar">مها الدوسري</span><span class="en">Maha Al-Dosari</span></h4>
-                <span><span class="ar">عميلة البوتكس</span><span class="en">Botox Client</span></span>
+                <h4><span class="ar">تقييم من جوجل</span><span class="en">Google Review</span></h4>
+                <span><span class="ar">عميلة تنظيف البشرة</span><span class="en">Facial Cleansing Client</span></span>
               </div>
             </div>
           </div>
@@ -989,31 +855,14 @@
           <div class="testimonial-card mx-auto">
             <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
             <p class="quote">
-              <span class="ar">"العيادة نظيفة جدًا والأجهزة حديثة، وأشعر بالاطمئنان كلما زرت الفريق هناك. جهاز الليزر ديكا اجين ممتاز وسريع."</span>
-              <span class="en">"The clinic is spotless with modern equipment — I always feel at ease visiting the team. The Deka Ajeen laser device is excellent and fast."</span>
+              <span class="ar">"عيادة متكاملة ما شاء الله، من الاستقبال والفريق الطبي والإدارة الجميع بدون استثناء كانوا قمة في الرقي والتعامل. الممرضة اللي سوّت لي تنظيف بشرة شغلها جميل ونفسيتها حلوة."</span>
+              <span class="en">"A truly complete clinic — reception, medical team, and administration were all, without exception, the height of elegance and professionalism. The nurse who did my facial cleaning was skilled and lovely to deal with."</span>
             </p>
             <div class="testimonial-user">
               <img src="images/client-3.jpg" alt="عميلة عيادات لايف ويز" loading="lazy" width="60" height="60">
               <div>
-                <h4><span class="ar">منيرة الشمري</span><span class="en">Muneera Al-Shammari</span></h4>
-                <span><span class="ar">عميلة إزالة الشعر بالليزر</span><span class="en">Laser Hair Removal Client</span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="testimonial-card mx-auto">
-            <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            <p class="quote">
-              <span class="ar">"جلسة تنظيف البشرة الـ VIP غيّرت نضارة وجهي للأفضل، والمتابعة من الأخصائية كانت مستمرة ودقيقة."</span>
-              <span class="en">"The VIP facial cleansing session transformed my skin's radiance for the better, with consistent, precise follow-up from the specialist."</span>
-            </p>
-            <div class="testimonial-user">
-              <img src="images/client-4.jpg" alt="عميلة عيادات لايف ويز" loading="lazy" width="60" height="60">
-              <div>
-                <h4><span class="ar">ريم العنزي</span><span class="en">Reem Al-Anzi</span></h4>
-                <span><span class="ar">عميلة تنظيف البشرة</span><span class="en">Facial Cleansing Client</span></span>
+                <h4><span class="ar">تقييم من جوجل</span><span class="en">Google Review</span></h4>
+                <span><span class="ar">عميلة العيادة</span><span class="en">Clinic Client</span></span>
               </div>
             </div>
           </div>
@@ -1032,7 +881,6 @@
         <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3"></button>
       </div>
     </div>
   </div>
@@ -1118,7 +966,21 @@
         <div class="contact-info-card">
           <i class="fa-solid fa-location-dot"></i>
           <h3><span class="ar">العنوان</span><span class="en">Address</span></h3>
-          <span><span class="ar">الرياض، المملكة العربية السعودية</span><span class="en">Riyadh, Saudi Arabia</span></span>
+          <span><span class="ar">المملكة العربية السعودية، الرياض، حي المرسلات، شارع أبو بكر الصديق</span><span class="en">Al Murasalat, Abu Bakr Al Siddiq St., Riyadh, Saudi Arabia</span></span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal-up delay-2">
+        <div class="contact-info-card">
+          <i class="fa-solid fa-user-plus"></i>
+          <h3><span class="ar">الانضمام إلى فريقنا</span><span class="en">Join Our Team</span></h3>
+          <a href="tel:+966557765616" dir="ltr">0557765616</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal-left delay-2">
+        <div class="contact-info-card">
+          <i class="fa-solid fa-comment-dots"></i>
+          <h3><span class="ar">الشكاوى والاقتراحات</span><span class="en">Complaints &amp; Suggestions</span></h3>
+          <a href="tel:+966557765616" dir="ltr">0557765616</a>
         </div>
       </div>
     </div>
@@ -1130,11 +992,101 @@
           <div>
             <h3><span class="ar">ساعات العمل</span><span class="en">Working Hours</span></h3>
             <p>
-              <span class="ar">السبت - الخميس: 12:00 مساءً - 12:00 صباحا</span>
-              <span class="en">Sat - Thu: 12:00 pM - 12:00 AM</span>
+              <span class="ar">السبت - الأربعاء: 2:00 - 10:00 مساءً · الخميس: 2:00 - 9:00 مساءً · الجمعة إجازة رسمية</span>
+              <span class="en">Sat - Wed: 2:00 - 10:00 PM · Thu: 2:00 - 9:00 PM · Friday: Closed</span>
             </p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     عروض — OFFERS
+     ============================================================ -->
+<section id="offers" class="section offers-section">
+  <div class="container position-relative">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <span class="section-eyebrow light reveal-left">
+          <span class="ar">عرض حصري</span><span class="en">Exclusive Offer</span>
+        </span>
+        <h2 class="section-title light reveal-left delay-1">
+          <span class="ar">خصم 10% لكل عملائنا الجدد على جميع الخدمات</span>
+          <span class="en">10% Off All Services for New Clients</span>
+        </h2>
+        <p class="section-text light reveal-left delay-2">
+          <span class="ar">استمتعي بخصم فوري على أي إجراء تختارينه من أقسامنا المتخصصة، عند حجز موعدك الأول معنا.</span>
+          <span class="en">Enjoy an instant discount on any procedure from our specialized departments when you book your first appointment with us.</span>
+        </p>
+        <a href="#booking" class="btn btn-outline-light-teal btn-lg reveal-left delay-3">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span class="ar">احجزي واستفيدي من العرض</span><span class="en">Book &amp; Claim the Offer</span>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="offer-badge-wrap reveal-right">
+          <div class="offer-badge">
+            <span class="offer-percent">10%</span>
+            <span class="offer-label"><span class="ar">خصم للعملاء الجدد</span><span class="en">Off for New Clients</span></span>
+          </div>
+          <p class="offer-note">
+            <span class="ar">على جميع خدمات الجلدية والتجميل، والبشرة، والليزر.</span>
+            <span class="en">On all Dermatology &amp; Cosmetics, Skincare, and Laser services.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     منصاتنا — PLATFORMS
+     ============================================================ -->
+<section id="platforms" class="section platforms-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow reveal-up">
+        <span class="ar">منصاتنا</span><span class="en">Our Platforms</span>
+      </span>
+      <h2 class="section-title reveal-up delay-1">
+        <span class="ar">تابعينا لتصلك آخر العروض والتحديثات</span>
+        <span class="en">Follow Us for the Latest Offers &amp; Updates</span>
+      </h2>
+      <p class="section-text mx-auto reveal-up delay-2" style="max-width:640px">
+        <span class="ar">Lifeways.sa — نفس الاسم على جميع منصاتنا</span>
+        <span class="en">Lifeways.sa — the same handle across all our platforms</span>
+      </p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3 reveal-left">
+        <a href="https://www.instagram.com/lifeways.sa" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-icon platform-instagram"><i class="fa-brands fa-instagram"></i></div>
+          <h3>Instagram</h3>
+          <span dir="ltr">@lifeways.sa</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 reveal-up delay-1">
+        <a href="https://www.tiktok.com/@lifeways.sa" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-icon platform-tiktok"><i class="fa-brands fa-tiktok"></i></div>
+          <h3>TikTok</h3>
+          <span dir="ltr">@lifeways.sa</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 reveal-right">
+        <a href="https://www.snapchat.com/add/lifeways.sa" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-icon platform-snapchat"><i class="fa-brands fa-snapchat"></i></div>
+          <h3>Snapchat</h3>
+          <span dir="ltr">@lifeways.sa</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 reveal-left delay-1">
+        <a href="https://wa.me/966554080703" target="_blank" rel="noopener" class="platform-card">
+          <div class="platform-icon platform-whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>WhatsApp</h3>
+          <span dir="ltr">0554080703</span>
+        </a>
       </div>
     </div>
   </div>
@@ -1166,21 +1118,21 @@
       <div class="col-lg-2 col-sm-6">
         <h4><span class="ar">روابط سريعة</span><span class="en">Quick Links</span></h4>
         <ul class="footer-links">
-          <li><a href="#about"><span class="ar">نبذة عنا</span><span class="en">About</span></a></li>
-          <li><a href="#services"><span class="ar">خدماتنا</span><span class="en">Services</span></a></li>
-          <li><a href="#doctors"><span class="ar">فريقنا</span><span class="en">Our Team</span></a></li>
-          <li><a href="#gallery"><span class="ar">معرض الصور</span><span class="en">Gallery</span></a></li>
+          <li><a href="#about"><span class="ar">نبذة تعريفية</span><span class="en">About</span></a></li>
+          <li><a href="#departments"><span class="ar">الأقسام</span><span class="en">Departments</span></a></li>
+          <li><a href="#gallery"><span class="ar">حالات العيادة</span><span class="en">Clinic Cases</span></a></li>
+          <li><a href="#offers"><span class="ar">عروض</span><span class="en">Offers</span></a></li>
           <li><a href="#booking"><span class="ar">احجز موعد</span><span class="en">Book Now</span></a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-sm-6">
-        <h4><span class="ar">خدماتنا</span><span class="en">Our Services</span></h4>
+        <h4><span class="ar">أقسامنا</span><span class="en">Our Departments</span></h4>
         <ul class="footer-links">
-          <li><a href="#services"><span class="ar">حقن الفيلر</span><span class="en">Filler Injections</span></a></li>
-          <li><a href="#services"><span class="ar">البوتكس</span><span class="en">Botox</span></a></li>
-          <li><a href="#services"><span class="ar">تنظيف البشرة</span><span class="en">Facial Cleansing</span></a></li>
-          <li><a href="#services"><span class="ar">إزالة الشعر بالليزر</span><span class="en">Laser Hair Removal</span></a></li>
+          <li><a href="#departments"><span class="ar">الجلدية والتجميل</span><span class="en">Dermatology &amp; Cosmetics</span></a></li>
+          <li><a href="#departments"><span class="ar">البشرة</span><span class="en">Skincare</span></a></li>
+          <li><a href="#departments"><span class="ar">الليزر</span><span class="en">Laser</span></a></li>
+          <li><a href="#platforms"><span class="ar">منصاتنا</span><span class="en">Our Platforms</span></a></li>
         </ul>
       </div>
 
@@ -1190,7 +1142,7 @@
           <li><i class="fa-solid fa-phone"></i><a href="tel:0554080703" dir="ltr">0554080703</a></li>
           <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/966554080703" target="_blank" rel="noopener" dir="ltr">+966 55 408 0703</a></li>
           <li><i class="fa-solid fa-envelope"></i><a href="mailto:Lifeways.sa@gmail.com" dir="ltr">Lifeways.sa@gmail.com</a></li>
-          <li><i class="fa-solid fa-location-dot"></i><span><span class="ar">الرياض، السعودية</span><span class="en">Riyadh, Saudi Arabia</span></span></li>
+          <li><i class="fa-solid fa-location-dot"></i><span><span class="ar">حي المرسلات، شارع أبو بكر الصديق، الرياض</span><span class="en">Al Murasalat, Abu Bakr Al Siddiq St., Riyadh</span></span></li>
         </ul>
       </div>
     </div>

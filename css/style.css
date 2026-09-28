@@ -152,6 +152,7 @@ h1,h2,h3,h4,h5,h6{ font-family: var(--font-display); font-weight:700; color: var
 }
 @media (prefers-reduced-motion: reduce){
   .preloader-icon{ animation:none; }
+  .marquee-track{ animation:none; }
 }
 
 /* ==========================================================================
@@ -161,14 +162,30 @@ h1,h2,h3,h4,h5,h6{ font-family: var(--font-display); font-weight:700; color: var
   position:fixed; top:0; inset-inline:0; z-index:1060;
   background: var(--teal-deep); color:#fff;
   height: 38px; overflow:hidden;
-  transition: transform .35s ease, height .35s ease, opacity .35s ease;
 }
-.top-bar.hide{ transform: translateY(-100%); opacity:0; }
 .top-bar .container{ height:100%; }
+.top-bar-marquee{ flex:1; overflow:hidden; height:100%; }
+.marquee-track{
+  display:inline-flex; align-items:center; height:100%; white-space:nowrap;
+  animation: marquee-scroll 14s linear infinite;
+  will-change: transform;
+}
+.top-bar-marquee:hover .marquee-track{ animation-play-state: paused; }
+.marquee-item{
+  display:inline-flex; align-items:center; gap:.5rem; padding-inline-end: 4rem;
+  color:#fff; text-decoration:none; font-weight:700; font-size:.85rem; white-space:nowrap;
+  transition: opacity .2s ease;
+}
+.marquee-item:hover{ opacity:.85; }
+.marquee-item i{ color:#fff; }
+@keyframes marquee-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
 .top-bar-tagline{
   align-items:center; gap:.5rem; font-size:.82rem; font-weight:500; opacity:.9;
 }
-.top-bar-social{ display:flex; align-items:center; gap:.9rem; }
+.top-bar-social{ display:flex; align-items:center; gap:.9rem; flex-shrink:0; margin-inline-start:1.2rem; }
 .top-bar-social a{
   color:#fff; opacity:.85; font-size:.85rem; transition: all .2s ease; display:inline-flex;
 }
@@ -183,11 +200,10 @@ h1,h2,h3,h4,h5,h6{ font-family: var(--font-display); font-weight:700; color: var
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 18px rgba(13,43,46,.05);
   padding: .55rem 0;
-  transition: top .35s ease, padding .35s ease, box-shadow .35s ease;
+  transition: padding .35s ease, box-shadow .35s ease;
   z-index: 1050;
 }
 .main-navbar.scrolled{
-  top:0;
   padding: .3rem 0;
   box-shadow: 0 8px 26px rgba(13,43,46,.09);
 }
@@ -627,6 +643,101 @@ html[dir="ltr"] .testi-arrow .fa-chevron-left:before{ content:"\f054"; }
   .reveal-left{ transform: translateX(-30px); }
   .reveal-right{ transform: translateX(30px); }
 }
+
+/* ==========================================================================
+   TOP BAR PROMO
+   ========================================================================== */
+.top-bar-promo .top-bar-tagline{
+  color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:.5rem;
+  font-weight:700; transition: opacity .2s ease;
+}
+.top-bar-promo .top-bar-tagline:hover{ opacity:.85; }
+.top-bar-promo .top-bar-tagline i{ color:#fff; }
+
+/* ==========================================================================
+   REQUIRED FIELD MARKER
+   ========================================================================== */
+.req-star{ color:#E24C4C; font-weight:700; }
+
+/* ==========================================================================
+   DEPARTMENTS
+   ========================================================================== */
+.dept-card{
+  background:#fff; border-radius: var(--radius-lg); padding: 2.4rem 2.2rem; margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm); border: 1px solid #EAF4F4; transition: box-shadow .3s ease;
+}
+.dept-card:hover{ box-shadow: var(--shadow-md); }
+.dept-header{ display:flex; gap:1.4rem; align-items:flex-start; margin-bottom: 1.6rem; }
+.dept-icon{
+  width:72px; height:72px; border-radius: 20px; background: var(--gradient-brand); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:1.9rem; flex-shrink:0;
+  box-shadow: 0 10px 26px rgba(0,127,124,.25);
+}
+.dept-header h3{ font-size:1.4rem; margin-bottom:.4rem; }
+.dept-header p{ color: var(--ink-soft); font-size:.98rem; line-height:1.7; margin:0; }
+
+.dept-procedures{ display:flex; flex-wrap:wrap; gap:.6rem; margin-bottom: 1.6rem; }
+.proc-pill{
+  display:inline-block; background: var(--teal-pale); color: var(--teal-deep); font-weight:700;
+  font-size:.85rem; padding:.5rem 1.1rem; border-radius: 50px; border: 1px solid rgba(0,172,168,.15);
+}
+
+.dept-doctors{
+  display:grid; grid-template-columns: 1fr 1fr; gap:1.4rem; margin-bottom: 1.8rem;
+  padding-top: 1.6rem; border-top: 1px dashed #E1F0F0;
+}
+.doc-mini-name{ font-family: var(--font-display); font-weight:800; color: var(--ink); margin-bottom:.6rem; font-size:1.02rem; }
+.doc-mini-creds{ list-style:none; padding:0; margin:0; }
+.doc-mini-creds li{
+  position:relative; padding-inline-start:1.2rem; margin-bottom:.4rem; color: var(--ink-soft); font-size:.82rem; line-height:1.6;
+}
+.doc-mini-creds li::before{
+  content:''; position:absolute; inset-inline-start:0; top:.5em; width:5px; height:5px; border-radius:50%;
+  background: var(--teal-primary);
+}
+
+.dept-actions{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; }
+.dept-actions .btn{ display:inline-flex; align-items:center; gap:.5rem; }
+
+@media (max-width: 767.98px){
+  .dept-card{ padding: 1.8rem 1.4rem; }
+  .dept-doctors{ grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   OFFERS
+   ========================================================================== */
+.offers-section{ background: var(--gradient-brand); overflow:hidden; }
+.offer-badge-wrap{ text-align:center; }
+.offer-badge{
+  display:inline-flex; flex-direction:column; align-items:center; justify-content:center;
+  width: 230px; height: 230px; border-radius:50%; background: rgba(255,255,255,.12);
+  border: 2px dashed rgba(255,255,255,.45); margin: 0 auto 1.6rem;
+}
+.offer-percent{ font-family: var(--font-display); font-weight:900; font-size:3.4rem; color:#fff; line-height:1; }
+.offer-label{ color:#fff; font-weight:700; font-size:.95rem; margin-top:.5rem; max-width:160px; text-align:center; }
+.offer-note{ color: rgba(255,255,255,.85); font-size:.95rem; max-width:340px; margin:0 auto; }
+
+/* ==========================================================================
+   PLATFORMS
+   ========================================================================== */
+.platforms-section{ background:#fff; }
+.platform-card{
+  display:flex; flex-direction:column; align-items:center; gap:.6rem; text-align:center;
+  background: var(--teal-pale-2); border: 1px solid #EAF4F4; border-radius: var(--radius-md);
+  padding: 2rem 1rem; transition: all .3s ease; color: var(--ink);
+}
+.platform-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-md); color: var(--ink); }
+.platform-icon{
+  width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-size:1.6rem; color:#fff;
+}
+.platform-instagram{ background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.platform-tiktok{ background:#000; }
+.platform-snapchat{ background:#FFFC00; color:#111; }
+.platform-whatsapp{ background:#25D366; }
+.platform-card h3{ font-family: var(--font-display); font-weight:800; font-size:1.05rem; margin:0; }
+.platform-card span{ font-size:.85rem; color: var(--ink-soft); }
 
 /* ==========================================================================
    RESPONSIVE FIXES

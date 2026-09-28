@@ -1,0 +1,38 @@
+# Life Way's Medical | عيادات لايف ويز
+
+> أفضل عيادة تجميل في الرياض. عيادة تجميل متخصصة تضم ثلاثة أقسام رئيسية: الجلدية والتجميل، البشرة،
+> والليزر، بإشراف فريق طبي متخصص وأحدث الأجهزة. عرض حصري للعملاء الجدد: خصم 10% على جميع الخدمات.
+
+Best cosmetic clinic in Riyadh, Saudi Arabia. Life Way's Medical has three main departments:
+Dermatology & Cosmetics, Skincare, and Laser, overseen by a specialized medical team using modern
+equipment. Exclusive offer for new clients: 10% off all services.
+
+## الأقسام (Departments)
+- الجلدية والتجميل (Dermatology & Cosmetics) — الفيلر، البوتكس، راديس، سكلبترا، محفزات الكولاجين،
+  إذابة الفيلر، إبر النضارة، سكين بوستر، ليب بوستر، إنوفيال، تساقط الشعر، مورفيوس، فراكشينال،
+  تقشير بارد، الندبات والتصبغات وآثار الحبوب، الشامات والزوائد الجلدية
+  Supervised by Dr. Tarek Hawash (Dermatology & Cosmetics Specialist) and
+  Dr. Shaimaa Hafez (Senior Registrar in Dermatology, Egyptian Board holder).
+- البشرة (Skincare) — تنظيف بشرة كلاسيك، هيدرافيشيال، مورفيوس، ديرمابن
+- الليزر (Laser) — جهاز ديكا اجين لإزالة الشعر لجميع أنواع البشرة
+
+## معلومات التواصل (Contact)
+- الموقع (Website): https://gaafar123g.github.io/lifeways/
+- خدمة العملاء (Customer Service): +966554080703
+- واتساب (WhatsApp): +966554080703
+- الإدارة (Administration): +966561537037
+- الانضمام إلى الفريق (Join the Team): +966557765616
+- الشكاوى والاقتراحات (Complaints & Suggestions): +966557765616
+- البريد الإلكتروني (Email): Lifeways.sa@gmail.com
+- العنوان (Address): حي المرسلات، شارع أبو بكر الصديق، الرياض، المملكة العربية السعودية
+- ساعات العمل (Hours): السبت - الأربعاء 2:00-10:00 مساءً، الخميس 2:00-9:00 مساءً، الجمعة إجازة
+  (Sat-Wed 2-10 PM, Thu 2-9 PM, Friday closed)
+- إنستغرام / تيك توك / سناب شات: lifeways.sa
+
+## صفحات رئيسية (Key Sections)
+- نبذة تعريفية (About): https://gaafar123g.github.io/lifeways/#about
+- الأقسام (Departments): https://gaafar123g.github.io/lifeways/#departments
+- حالات العيادة (Clinic Cases): https://gaafar123g.github.io/lifeways/#gallery
+- عروض (Offers): https://gaafar123g.github.io/lifeways/#offers
+- منصاتنا (Our Platforms): https://gaafar123g.github.io/lifeways/#platforms
+- احجز موعد (Book an Appointment): https://gaafar123g.github.io/lifeways/#booking

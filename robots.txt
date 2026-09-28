@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gaafar123g.github.io/lifeways/sitemap.xml

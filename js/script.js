@@ -53,6 +53,10 @@
     document.querySelectorAll("option[data-ar]").forEach(function (opt) {
       opt.textContent = isAr ? opt.getAttribute("data-ar") : opt.getAttribute("data-en");
     });
+    // تعبئة عناوين مجموعات الخدمات (optgroup) حسب اللغة
+    document.querySelectorAll("optgroup[data-ar-label]").forEach(function (grp) {
+      grp.setAttribute("label", isAr ? grp.getAttribute("data-ar-label") : grp.getAttribute("data-en-label"));
+    });
 
     localStorage.setItem("lw_lang", lang);
   }
@@ -128,9 +132,9 @@
           `👤 الاسم: ${name}\n` +
           `📱 الجوال: ${phone}\n` +
           `🩺 الخدمة: ${service}\n` +
-          `📅 التاريخ المفضل: ${date}\n` +
-          `⏰ الوقت المفضل: ${time}\n` +
           `⚧ الجنس: ${gender}` +
+          (date ? `\n📅 التاريخ المفضل: ${date}` : "") +
+          (time ? `\n⏰ الوقت المفضل: ${time}` : "") +
           (notes ? `\n📝 ملاحظات: ${notes}` : "");
       } else {
         message =
@@ -139,9 +143,9 @@
           `👤 Name: ${name}\n` +
           `📱 Phone: ${phone}\n` +
           `🩺 Service: ${service}\n` +
-          `📅 Preferred date: ${date}\n` +
-          `⏰ Preferred time: ${time}\n` +
           `⚧ Gender: ${gender}` +
+          (date ? `\n📅 Preferred date: ${date}` : "") +
+          (time ? `\n⏰ Preferred time: ${time}` : "") +
           (notes ? `\n📝 Notes: ${notes}` : "");
       }
 
@@ -171,7 +175,6 @@
   function onScroll() {
     const scrolled = window.scrollY > 40;
     if (navbar) navbar.classList.toggle("scrolled", scrolled);
-    if (topBar) topBar.classList.toggle("hide", scrolled);
 
     // زر العودة للأعلى
     if (backToTop) backToTop.classList.toggle("show", window.scrollY > 500);
